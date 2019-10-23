@@ -57,11 +57,10 @@ plot!(1:LENGTH*2-1,
 
 question_layout = @layout[a;b]
 
-plot(p1, p2, layout = question_layout)
-plot!(title="Convolve these two series.")
-png("images/$(LENGTH)_$(i)_question")
+plot(p1, p2, layout = question_layout, title="Convolve these two series.")
+png("images/$(LENGTH)_$(i)_side-a_question")
 
-plot(p3)
-png("images/$(LENGTH)_$(i)_answer")
+plot(p3, title="Convolution in red! Did you get it?")
+png("images/$(LENGTH)_$(i)_side-b_answer")
 end
 end
